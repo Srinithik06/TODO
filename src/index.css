@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* ===============================
+   Gradient Blob Animation
+   (Option 3 – Modern SaaS style)
+   =============================== */
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -40px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 30s infinite ease-in-out;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* ===============================
+   Falling Rolling Triangles
+   =============================== */
+
+.triangle {
+  position: absolute;
+  top: -10%;
+  opacity: 0.25;
+  animation-name: fallTriangle;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  /* Triangle shape */
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 14px solid rgba(255, 255, 255, 0.35);
+}
+
+@keyframes fallTriangle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.35;
+  }
+
+  80% {
+    opacity: 0.35;
+  }
+
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
